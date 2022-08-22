@@ -3,6 +3,16 @@
 .ic-language {width:26px;height:25px;background-image:url("../images/icon/ic-language.png")}
 .ic-home {width:30px;height:26px;background-image:url("../images/icon/ic-home.png")}
 .ic-arrow {width:9px;height:22px;background-image:url("../images/icon/ic-arrow.png")}
+.ic-notice {width:25px;height:25px;background-image:url("../images/icon/ic-notice.png")}
+.ic-pprev {width:7px;height:8px;background-image:url("../images/icon/ic-pprev.png")}
+.ic-prev {width:4px;height:8px;background-image:url("../images/icon/ic-prev.png")}
+.ic-nnext {width:7px;height:8px;background-image:url("../images/icon/ic-nnext.png")}
+.ic-next {width:4px;height:8px;background-image:url("../images/icon/ic-next.png")}
+.ic-new {width:19px;height:19px;background-image:url("../images/icon/ic-new.png")}
+
+/* button */
+[class^="btn-basic-"] {display:inline-flex;align-items:center;justify-content:center}
+.btn-basic-line {height:52px;min-width:140px;padding:0 24px;border:2px solid #000;font-size:16px;color:#000}
 
 /* breadcrumb */
 .breadcrumb-box {background-color:#dde6f0}
@@ -12,6 +22,8 @@
 .breadcrumb-box .breadcrumb-item:not(:last-child):after {content:'';display:block;width:9px;height:22px;background:url("../images/icon/ic-arrow.png") no-repeat 50% 50%;background-size:contain;margin-left:16px}
 
 /* title */
+.page-title-wrap {display:flex;align-items:center}
+.page-title-wrap .r-content {margin-left:auto}
 .page-title {font-size:48px;color:#000;font-weight:700}
 .sub-title {font-size:24px;color:#000;font-weight:700}
 .page-txt-a {font-size:18px;color:#000;line-height:1.6}
@@ -19,4 +31,27 @@
 /* margin */
 .mt-100 {margin-top:100px}
 .mt-80 {margin-top:80px}
+.mt-40 {margin-top:40px}
 .mt-20 {margin-top:20px}
+
+/* table */
+.w-5p {width:5%}
+.w-10p {width:10%}
+.w-15p {width:15%}
+.w-20p {width:20%}
+.w-auto {width:auto}
+.table-list table {border-bottom:2px solid #cfcfd1}
+.table-list thead th {background-color:#000;color:#fff;text-align:center;height:48px;font-size:15px}
+.table-list tbody td {height:48px;text-align:center;font-size:17px;font-weight:500}
+.table-list tbody td.subject {text-align:left;padding:0 10px}
+.table-list tbody tr.fixed td {background-color:#e9ebee;font-weight:700}
+.table-list tbody td .link-notice {display:inline-block;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;color:#000}
+.table-list .ic-new {vertical-align:middle;margin-left:8px;position:relative;top:-2px}
+
+/* paging */
+.paging {margin-top:40px;display:flex;justify-content:center;gap:4px}
+.paging .link-paging {display:inline-flex;min-width:30px;height:28px;border:1px solid #ccc;align-items:center;justify-content:center;padding:0 8px;font-size:12px;color:#666}
+.paging .link-paging.active,
+.paging .link-paging:hover {border-color:#828b9d;color:#6f6f86}
+.paging .link-paging.prev {margin-right:10px}
+.paging .link-paging.next {margin-left:10px}
