@@ -1,3 +1,15 @@
 .main {background:url("../images/main/main-bg.jpg") no-repeat 50% 50%;background-size:cover}
 .main .header,
 .main .header-top .gnb-wrap {background-color:transparent}
+.main .box-content-area {display:flex;flex-wrap:wrap;gap:24px;max-width:1380px;margin:0 auto;padding:256px 10px 110px}
+.main .box-item {width:calc((100% - 48px) / 3);position:relative;aspect-ratio:438/334;background-size:contain;background-repeat:no-repeat;background-position:100% 100%}
+.main .box-item.n1 {background-image:url("../images/main/main-card-1.png");background-color:#2faeef}
+.main .box-item.n2 {background-image:url("../images/main/main-card-2.png");background-color:#fff}
+.main .box-item.n3 {background-image:url("../images/main/main-card-3.png");background-color:#1cac42}
+.main .box-item.n4 {background-image:url("../images/main/main-card-4.png");background-color:#5a6f7f}
+.main .box-item.n5 {background-image:url("../images/main/main-card-5.png");background-color:#3c45f1}
+.main .box-item.n6 {background-image:url("../images/main/main-card-6.png");background-color:#fff}
+.main .box-item .link-box {position:absolute;top:0;left:0;right:0;bottom:0;padding:32px}
+.main .box-item .link-txt {font-family:'GmarketSans', 'sans-serif';font-size:40px;font-weight:300;line-height:38px;color:#fff}
+.main .box-item.n2 .link-txt,
+.main .box-item.n6 .link-txt {color:#000}
