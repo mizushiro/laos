@@ -67,5 +67,18 @@
 <script src="../js/polyfill.js"></script>
 <script src="../js/ui.global.js"></script>
 <script src="../js/ui.common.js"></script>
+<script>
+	'use strict';
+
+	//utils module
+	(function (win, doc, undefined) {
+		doc.addEventListener("DOMContentLoaded", function(){
+			const currentPageName = 'GK2A';
+
+			laosUI.common.menuActive(currentPageName);
+		});
+	})(window, document);
+
+</script>
 </body>
 </html>
