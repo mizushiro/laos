@@ -10,11 +10,20 @@
 				page:true, 
 				callback:laosUI.common.header 
 			});
+			laosUI.ajax.init({ 
+				area: document.querySelector('footer.footer'), 
+				url:'/laos/html/inc/footer.html', 
+				page:true, 
+				callback:laosUI.common.footer 
+			});
 			
 			console.log('------------------------------------------------------')
 		},
 		header: function(){
 			console.log('header load');	
+		},
+		footer: function(){
+			console.log('footer load');	
 		}
 		
 	};
