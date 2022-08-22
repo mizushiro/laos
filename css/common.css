@@ -45,7 +45,7 @@
 .table-list tbody td {height:48px;text-align:center;font-size:17px;font-weight:500}
 .table-list tbody td.subject {text-align:left;padding:0 10px}
 .table-list tbody tr.fixed td {background-color:#e9ebee;font-weight:700}
-.table-list tbody td .link-notice {display:inline-block;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;color:#000}
+.table-list tbody td .link-notice {display:inline-block;max-width:calc(100% - 28px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;color:#000}
 .table-list .ic-new {vertical-align:middle;margin-left:8px;position:relative;top:-2px}
 
 /* paging */
