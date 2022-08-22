@@ -22,3 +22,11 @@
 
 .gnb-wrap .sub-gnb {overflow:hidden;height:0;opacity:0;-webkit-transition-duration:0.2s;transition-duration:0.2s}
 .gnb-wrap .link-sub-gnb {width:100%;height:52px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px}
+
+.footer {background-color:#000;padding:64px 0}
+.footer .container {display:flex;justify-content:space-between}
+.footer .footer-logo {background:url("../images/common/footer-logo.png") no-repeat 50% 50%;background-size:contain;width:299px;height:100px}
+.footer .copy {text-align:right}
+.footer .copy .copy-txt {font-size:18px;color:#7a7979;font-weight:300}
+.footer .copy .copy-txt ~ .copy-txt {margin-top:12px}
+.footer .copy .copy-item {margin-left:40px;display:inline-block}
