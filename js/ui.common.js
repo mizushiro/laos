@@ -6,13 +6,13 @@
 		init: function(){
 			laosUI.ajax.init({ 
 				area: document.querySelector('header.header'), 
-				url:'/laos/html/inc/header.html', 
+				url:'./inc/header.html', 
 				page:true, 
 				callback:laosUI.common.header 
 			});
 			laosUI.ajax.init({ 
 				area: document.querySelector('footer.footer'), 
-				url:'/laos/html/inc/footer.html', 
+				url:'./inc/footer.html', 
 				page:true, 
 				callback:laosUI.common.footer 
 			});
