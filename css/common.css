@@ -1,3 +1,22 @@
 /* icon */
 [class^="ic-"] {display:inline-block;background-size:contain;background-repeat:no-repeat;background-position:50% 50%}
 .ic-language {width:26px;height:25px;background-image:url("../images/icon/ic-language.png")}
+.ic-home {width:30px;height:26px;background-image:url("../images/icon/ic-home.png")}
+.ic-arrow {width:9px;height:22px;background-image:url("../images/icon/ic-arrow.png")}
+
+/* breadcrumb */
+.breadcrumb-box {background-color:#dde6f0}
+.breadcrumb-box .breadcrumb {height:68px;display:flex;align-items:center}
+.breadcrumb-box .breadcrumb-item {color:#6b8aad;font-size:18px}
+.breadcrumb-box .breadcrumb-item:not(:last-child) {display:flex;align-items:center;margin-right:16px}
+.breadcrumb-box .breadcrumb-item:not(:last-child):after {content:'';display:block;width:9px;height:22px;background:url("../images/icon/ic-arrow.png") no-repeat 50% 50%;background-size:contain;margin-left:16px}
+
+/* title */
+.page-title {font-size:48px;color:#000;font-weight:700}
+.sub-title {font-size:24px;color:#000;font-weight:700}
+.page-txt-a {font-size:18px;color:#000;line-height:1.6}
+
+/* margin */
+.mt-100 {margin-top:100px}
+.mt-80 {margin-top:80px}
+.mt-20 {margin-top:20px}
