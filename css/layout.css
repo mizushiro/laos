@@ -13,6 +13,7 @@
 .header-top .language-type {display:flex;align-items:center;font-size:20px;color:#fff}
 .header-top .language-type i {margin-right:15px}
 .header-top .gnb-wrap {position:absolute;top:165px;left:0;right:0;background-color:#002868;min-height:80px}
+.header-top .r-content .btn-gnb-open {display:none}
 
 .gnb-wrap .gnb {display:flex}
 .gnb-wrap .gnb:hover .sub-gnb {padding:10px 0 60px;height:auto;opacity:1}
@@ -29,7 +30,8 @@
 .gnb-wrap .sub-gnb {overflow:hidden;height:0;opacity:0;-webkit-transition-duration:0.2s;transition-duration:0.2s}
 .gnb-wrap .link-sub-gnb {width:100%;height:52px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px}
 
-.mobile-gnb-wrap {position:fixed;background-color:rgba(0,0,0,.6);top:0;width:100%;left:0;bottom:0;z-index:10}
+.mobile-gnb-wrap {position:fixed;background-color:rgba(0,0,0,.6);top:0;width:100%;left:100%;bottom:0;z-index:10;-webkit-transition-duration:0.2s;transition-duration:0.2s;display:none}
+.mobile-gnb-wrap.active {left:0}
 .mobile-gnb {position:absolute;right:0;width:calc(100% - 44px);background-color:#fff;top:0;height:100%;overflow-y:auto;overflow-x:hidden}
 .mobile-gnb-top {display:flex;justify-content:space-between;padding:20px}
 .mobile-gnb-top .language-type {color:#000;font-size:18px}
@@ -46,8 +48,25 @@
 
 .footer {background-color:#000;padding:64px 0}
 .footer .container {display:flex;justify-content:space-between}
-.footer .footer-logo {background:url("../images/common/footer-logo.png") no-repeat 50% 50%;background-size:contain;width:299px;height:100px}
+.footer .footer-logo {background:url("../images/common/footer-logo.png") no-repeat 50% 50%;background-size:contain;width:299px;height:100px;flex-shrink:0}
 .footer .copy {text-align:right}
 .footer .copy .copy-txt {font-size:18px;color:#7a7979;font-weight:300}
 .footer .copy .copy-txt ~ .copy-txt {margin-top:12px}
 .footer .copy .copy-item {margin-left:40px;display:inline-block}
+
+@media (max-width: 1023px) {
+    .header-top .r-content .btn-gnb-open,
+    .mobile-gnb-wrap {display:block}
+    .header-top .r-content .language-type,
+    .gnb-wrap {display:none}
+
+    .header-top > .container {border:none;padding:20px}
+    .header-top .logo {width:173px;height:42px}
+
+    .footer {padding:0}
+    .footer .container {padding:12px 20px}
+    .footer .footer-logo {width:100px;height:34px}
+    .footer .copy .copy-txt {font-size:11px}
+    .footer .m-block {display:block}
+    .footer .copy .copy-txt ~ .copy-txt {margin-top:0}
+}

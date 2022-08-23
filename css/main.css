@@ -13,3 +13,21 @@
 .main .box-item .link-txt {font-family:'GmarketSans', 'sans-serif';font-size:40px;font-weight:300;line-height:38px;color:#fff}
 .main .box-item.n2 .link-txt,
 .main .box-item.n6 .link-txt {color:#000}
+
+@media (max-width: 1023px) {
+    .main .box-content-area {padding:20px;gap:10px;width:100%;align-content:center}
+    .main .box-item {width:calc((100% - 10px) / 2)}
+    .main .box-item .link-box {padding:16px}
+    .main .box-item .link-txt {font-size:16px;line-height:16px}
+    .main .box-item.n1 {order:1}
+    .main .box-item.n2 {order:3}
+    .main .box-item.n3 {order:5}
+    .main .box-item.n4 {order:2}
+    .main .box-item.n5 {order:4}
+    .main .box-item.n6 {order:6}
+
+    .main {display:flex;flex-direction:column;height:100%}
+    .main .header,
+    .main .footer {flex-shrink:0}
+    .main .box-content-area {flex:1}
+}

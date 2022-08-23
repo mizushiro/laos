@@ -9,6 +9,8 @@
 .ic-nnext {width:7px;height:8px;background-image:url("../images/icon/ic-nnext.png")}
 .ic-next {width:4px;height:8px;background-image:url("../images/icon/ic-next.png")}
 .ic-new {width:19px;height:19px;background-image:url("../images/icon/ic-new.png")}
+.ic-gnb-close {width:20px;height:20px;background-image:url("../images/icon/ic-gnb-close.png")}
+.ic-gnb-open {width:24px;height:19px;background-image:url("../images/icon/ic-gnb-open.png")}
 
 /* button */
 [class^="btn-basic-"] {display:inline-flex;align-items:center;justify-content:center}
