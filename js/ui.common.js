@@ -46,7 +46,11 @@
 			const el_sub = doc.querySelectorAll('.link-sub-gnb');
 			const len = el_sub.length;
 
-			laosUI.common.pagename = v;
+
+			console.log(v);
+			if (v === '') {
+				return false;
+			}
 
 			if (!laosUI.common.isHeader) {
 				setTimeout(function(){
