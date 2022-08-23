@@ -46,8 +46,6 @@
 			const el_sub = doc.querySelectorAll('.link-sub-gnb');
 			const len = el_sub.length;
 
-
-			console.log(v);
 			if (v === '') {
 				return false;
 			}
