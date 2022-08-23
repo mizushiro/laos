@@ -26,9 +26,18 @@
 
 			const btn_open = doc.querySelector('.btn-gnb-open');
 			const btn_close = doc.querySelector('.header .btn-close');
+			const el_wrap = doc.querySelector('.mobile-gnb-wrap');
+			const el_btns = el_wrap.querySelectorAll('.link-gnb');
+			const len = el_btns.length;
+
 
 			btn_open.addEventListener('click', laosUI.gnb.open);
 			btn_close.addEventListener('click', laosUI.gnb.close);
+			
+
+			for (let i = 0; i < len; i++ ) {
+				el_btns[i].addEventListener('click', laosUI.gnb.toggle);
+			}
 		},
 		footer: function(){
 			console.log('footer load');	
@@ -44,12 +53,9 @@
 					laosUI.common.menuActive(v);
 				},100)
 			} else {
-				console.log(len);
 				for (let i = 0; i < len; i++) {
 					const txt = el_sub[i].innerText;
-					console.log(el_sub[i].innerText,v);
 					if (txt === v) {
-						
 						el_sub[i].classList.add('active');
 						const el_wrap = el_sub[i].closest('.gnb-item');
 						el_wrap.classList.add('active');
@@ -71,9 +77,12 @@
 			const el_body = document.querySelector('.mobile-gnb-wrap');
 
 			el_body.classList.remove('active');
+		},
+		toggle: function(){
+			console.log(this);
+			this.closest('.gnb-item').classList.toggle('active')
 		}
 	};
-	
 
 	//기본실행
 	doc.addEventListener("DOMContentLoaded", function(){
