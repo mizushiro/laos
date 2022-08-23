@@ -57,3 +57,28 @@
 .paging .link-paging:hover {border-color:#828b9d;color:#6f6f86}
 .paging .link-paging.prev {margin-right:10px}
 .paging .link-paging.next {margin-left:10px}
+
+@media (max-width: 1023px) {
+    .not-mobile {display:none}
+
+    .ic-home {width:15px;height:13px}
+
+    .page-title {font-size:24px}
+    .sub-title {font-size:16px}
+    .page-txt-a {font-size:13px}
+
+    .mt-100 {margin-top:50px}
+    .mt-80 {margin-top:40px}
+    .mt-40 {margin-top:20px}
+
+    .breadcrumb-box .breadcrumb {height:40px}
+    .breadcrumb-box .breadcrumb-item {font-size:12px}
+    .breadcrumb-box .breadcrumb-item:not(:last-child):after {width:5px;height:11px;margin-left:8px}
+    .breadcrumb-box .breadcrumb-item:not(:last-child) {margin-right:8px}
+
+    .table-list thead th {font-size:14px}
+    .table-list tbody td {font-size:13px}
+
+    .paging {margin-top:28px}
+
+}
