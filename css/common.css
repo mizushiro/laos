@@ -62,6 +62,9 @@
     .not-mobile {display:none}
 
     .ic-home {width:15px;height:13px}
+    .ic-new {width:16px;height:16px}
+
+    .btn-basic-line {height:40px;min-width:100px;font-size:14px;padding:0 16px}
 
     .page-title {font-size:24px}
     .sub-title {font-size:16px}
