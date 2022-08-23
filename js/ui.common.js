@@ -23,6 +23,12 @@
 		header: function(){
 			console.log('header load');	
 			laosUI.common.isHeader = true;
+
+			const btn_open = doc.querySelector('.btn-gnb-open');
+			const btn_close = doc.querySelector('.header .btn-close');
+
+			btn_open.addEventListener('click', laosUI.gnb.open);
+			btn_close.addEventListener('click', laosUI.gnb.close);
 		},
 		footer: function(){
 			console.log('footer load');	
@@ -49,6 +55,20 @@
 		}
 	};
 
+	laosUI.gnb = {
+		open: function(){
+			console.log('open');
+			const el_body = document.querySelector('.mobile-gnb-wrap');
+
+			el_body.classList.add('active');
+		},
+		close: function(){ 
+			console.log('close');
+			const el_body = document.querySelector('.mobile-gnb-wrap');
+
+			el_body.classList.remove('active');
+		}
+	};
 	
 
 	//기본실행
