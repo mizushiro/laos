@@ -37,15 +37,19 @@
 			const el_sub = doc.querySelectorAll('.link-sub-gnb');
 			const len = el_sub.length;
 
+			laosUI.common.pagename = v;
+
 			if (!laosUI.common.isHeader) {
 				setTimeout(function(){
 					laosUI.common.menuActive(v);
 				},100)
 			} else {
+				console.log(len);
 				for (let i = 0; i < len; i++) {
 					const txt = el_sub[i].innerText;
-
+					console.log(el_sub[i].innerText,v);
 					if (txt === v) {
+						
 						el_sub[i].classList.add('active');
 						const el_wrap = el_sub[i].closest('.gnb-item');
 						el_wrap.classList.add('active');
