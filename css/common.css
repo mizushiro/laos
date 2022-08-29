@@ -69,8 +69,8 @@
 /* paging */
 .paging {margin-top:40px;display:flex;justify-content:center;gap:4px}
 .paging .link-paging {display:inline-flex;min-width:30px;height:28px;border:1px solid #ccc;align-items:center;justify-content:center;padding:0 8px;font-size:12px;color:#666}
-.paging .link-paging.active,
-.paging .link-paging:hover {border-color:#828b9d;color:#6f6f86}
+.paging .link-paging:hover {border-color:#0848eb;color:#0848eb}
+.paging .link-paging.active  {border-color:#0848eb;color:#fff;background-color:#0848eb}
 .paging .link-paging.prev {margin-right:10px}
 .paging .link-paging.next {margin-left:10px}
 
