@@ -24,7 +24,7 @@
 .breadcrumb-box .breadcrumb-item:not(:last-child):after {content:'';display:block;width:9px;height:22px;background:url("../images/icon/ic-arrow.png") no-repeat 50% 50%;background-size:contain;margin-left:16px}
 
 /* title */
-.page-title-wrap {display:flex;align-items:center}
+.page-title-wrap {display:flex;align-items:center;flex-wrap:wrap;gap:8px}
 .page-title-wrap .r-content {margin-left:auto}
 .page-title {font-size:48px;color:#000;font-weight:700}
 .sub-title {font-size:24px;color:#000;font-weight:700}
