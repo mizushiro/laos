@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Lao DMH</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="Laos, DMH"/>
+	<link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+<div class="wrap">
+	<header class="header">
+	</header>
+	<main class="content-area">
+		<div class="breadcrumb-box">
+			<div class="container">
+				<p class="breadcrumb">
+					<span class="breadcrumb-item"><i class="ic-home"></i><span class="for-a11y">home</span></span>
+					<span class="breadcrumb-item">Typhoon</span>
+					<span class="breadcrumb-item">Forecast</span>
+				</p>
+			</div>
+		</div>
+		<div class="container contents">
+			<div class="page-title-wrap">
+				<h2 class="page-title">Forecast</h2>
+			</div>
+			<div class="nav-box mt-40">
+				<button type="button" class="nav-item active">16호 열대저압부</button>
+				<button type="button" class="nav-item">7호 태풍 무란</button>
+			</div>
+			<div class="mt-40">
+				<p class="page-txt-b">제 16호 열대저압부 기상청 (2022년 08월 10일 16시 30분 발표)</p>
+				<div class="mt-20 table-list-b w-wide">
+					<table>
+						<colgroup>
+							<col class="w-10p">
+							<col class="w-8p" span="5">
+							<col class="w-auto">
+							<col class="w-10p">
+							<col class="w-5p">
+							<col class="w-8p" span="3">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col" rowspan="2">일시</th>
+							<th scope="col" colspan="2">중심위치</th>
+							<th scope="col" rowspan="2">중심기압<br>(hPa)</th>
+							<th scope="col" colspan="2">최대풍속</th>
+							<th scope="col" rowspan="2">강풍반경(km)<br>[예외반경]</th>
+							<th scope="col" rowspan="2">폭풍반경(km)<br>[예외반경]</th>
+							<th scope="col" rowspan="2">강도</th>
+							<th scope="col" rowspan="2">진행<br>방향</th>
+							<th scope="col" rowspan="2">이동속도<br>(km/h)</th>
+							<th scope="col" rowspan="2" class="no-line">70% <br>확률반경<br>(km)</th>
+						</tr>
+						<tr>
+							<th scope="col">위도(°N)</th>
+							<th scope="col">경도(°E)</th>
+							<th scope="col">초속(m/s)</th>
+							<th scope="col">시속(km/h)</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>23일 09시<br>현재</td>
+							<td>16.3</td>
+							<td>140.8</td>
+							<td>1002</td>
+							<td>18</td>
+							<td>65</td>
+							<td>150<br>[남서 약110]</td>
+							<td>-</td>
+							<td>-</td>
+							<td>북북서</td>
+							<td>12</td>
+							<td class="no-line">16</td>
+						</tr>
+						<tr>
+							<td>23일 09시<br>현재</td>
+							<td>16.3</td>
+							<td>140.8</td>
+							<td>1002</td>
+							<td>18</td>
+							<td>65</td>
+							<td>150<br>[남서 약110]</td>
+							<td>-</td>
+							<td>-</td>
+							<td>북북서</td>
+							<td>12</td>
+							<td class="no-line">16</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mt-40 weather-area">
+
+				</div>
+				<p class="page-txt-c mt-20">이 열대저압부는 24시간 이내에 제8호 태풍 메아리(MEARI)로 발달하여, 96시간 이내에 온대저기압으로 변질될 것으로 예상. <br>다음 정보는 오늘(10일) 22시 30분 경에 발표될 예정임.</p>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+	</footer>
+</div>
+
+<script src="../js/polyfill.js"></script>
+<script src="../js/ui.global.js"></script>
+<script src="../js/ui.common.js"></script>
+<script>
+	'use strict';
+
+	//utils module
+	(function (win, doc, undefined) {
+		doc.addEventListener("DOMContentLoaded", function(){
+			const currentPageName = 'Forecast';
+
+			laosUI.common.menuActive(currentPageName);
+		});
+	})(window, document);
+
+</script>
+</body>
+</html>

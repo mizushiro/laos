@@ -28,7 +28,10 @@
 .page-title-wrap .r-content {margin-left:auto}
 .page-title {font-size:48px;color:#000;font-weight:700}
 .sub-title {font-size:24px;color:#000;font-weight:700}
+
 .page-txt-a {font-size:18px;color:#000;line-height:1.6}
+.page-txt-b {font-size:26px;color:#000;line-height:1.5}
+.page-txt-c {font-size:24px;color:#000;line-height:1.5}
 
 /* margin */
 .mt-100 {margin-top:100px}
@@ -38,6 +41,7 @@
 
 /* table */
 .w-5p {width:5%}
+.w-8p {width:8%}
 .w-10p {width:10%}
 .w-15p {width:15%}
 .w-20p {width:20%}
@@ -50,6 +54,16 @@
 .table-list tbody td .link-notice {display:inline-block;max-width:calc(100% - 28px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;color:#000}
 .table-list .ic-new {vertical-align:middle;margin-left:8px;position:relative;top:-2px}
 
+.table-list-b table {border-top:4px solid #5e5d5d}
+.table-list-b thead th {font-size:16px;color:#343435;line-height:1.2;padding:12px 8px;text-align:center;border-right:2px solid #d9d9db}
+.table-list-b tbody td.no-line,
+.table-list-b thead th.no-line {border-right:none}
+.table-list-b thead tr ~ tr th {border-top:2px solid #d9d9db}
+.table-list-b tbody td {color:#343435;font-size:16px;line-height:1.2;border-right:2px solid #d9d9db;border-bottom:2px solid #d9d9db;text-align:center;padding:12px 8px;font-weight:500}
+.table-list-b tbody tr:first-child td {position:relative;padding-top:15px;padding-bottom:11px}
+.table-list-b tbody tr:first-child td:before {content:'';position:absolute;top:0;left:0;right:-2px;height:2px;background-color:#5e5d5d}
+.table-list-b tbody tr:first-child td.no-line:before {right:0}
+
 /* paging */
 .paging {margin-top:40px;display:flex;justify-content:center;gap:4px}
 .paging .link-paging {display:inline-flex;min-width:30px;height:28px;border:1px solid #ccc;align-items:center;justify-content:center;padding:0 8px;font-size:12px;color:#666}
@@ -57,6 +71,14 @@
 .paging .link-paging:hover {border-color:#828b9d;color:#6f6f86}
 .paging .link-paging.prev {margin-right:10px}
 .paging .link-paging.next {margin-left:10px}
+
+/* nav */
+.nav-box {display:flex;flex-wrap:wrap;gap:16px}
+.nav-box .nav-item {height:94px;border:2px solid #000;background-color:#fff;display:inline-flex;align-items:center;justify-content:center;padding:0 32px;min-width:260px;font-size:28px;color:#000}
+.nav-box .nav-item.active {background-color:#000;color:#fff}
+
+.weather-area {width:100%;aspect-ratio:1360/1070;text-align:center;border:1px solid #eee}
+.weather-area img {width:100%;height:100%;object-fit:contain;vertical-align:top}
 
 @media (max-width: 1023px) {
     .not-mobile {display:none}
@@ -68,7 +90,10 @@
 
     .page-title {font-size:24px}
     .sub-title {font-size:16px}
+
     .page-txt-a {font-size:13px}
+    .page-txt-b {font-size:16px}
+    .page-txt-c {font-size:14px}
 
     .mt-100 {margin-top:50px}
     .mt-80 {margin-top:40px}
@@ -79,9 +104,21 @@
     .breadcrumb-box .breadcrumb-item:not(:last-child):after {width:5px;height:11px;margin-left:8px}
     .breadcrumb-box .breadcrumb-item:not(:last-child) {margin-right:8px}
 
+    .nav-box {gap:8px}
+    .nav-box .nav-item {height:48px;min-width:160px;padding:0 20px;font-size:14px}
+
     .table-list thead th {font-size:14px}
     .table-list tbody td {font-size:13px}
 
+    .table-list-b thead th {font-size:14px;padding:8px}
+    .table-list-b tbody td {font-size:13px;padding:8px}
+    .table-list-b tbody tr:first-child td {padding-top:11px;padding-bottom:7px}
+
     .paging {margin-top:28px}
 
+    .w-wide {overflow-x:auto;overflow-y:hidden}
+    .w-wide table {width:160%}
+}
+@media (max-width: 600px) {
+    .w-wide table {width:300%}
 }
