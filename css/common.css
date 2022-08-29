@@ -32,12 +32,14 @@
 .page-txt-a {font-size:18px;color:#000;line-height:1.6}
 .page-txt-b {font-size:26px;color:#000;line-height:1.5}
 .page-txt-c {font-size:24px;color:#000;line-height:1.5}
+.page-txt-d {font-size:20px;color:#0072ff;line-height:1.5;font-weight:700}
 
 /* margin */
 .mt-100 {margin-top:100px}
 .mt-80 {margin-top:80px}
 .mt-40 {margin-top:40px}
 .mt-20 {margin-top:20px}
+.mt-10 {margin-top:10px}
 
 /* table */
 .w-5p {width:5%}
@@ -80,6 +82,24 @@
 .weather-area {width:100%;aspect-ratio:1360/1070;text-align:center;border:1px solid #eee}
 .weather-area img {width:100%;height:100%;object-fit:contain;vertical-align:top}
 
+.map-area {width:100%;aspect-ratio:1360/608;text-align:center;border:1px solid #eee;position:relative;background-color:#eee}
+.map-area .btn-group {position:absolute;top:16px;left:16px;display:flex;flex-wrap:wrap;gap:6px}
+.map-area .map-choice {height:32px;padding:0 16px;border-radius:16px;display:inline-flex;align-items:center;font-size:16px;color:#303032;font-weight:700;background-color:#fff}
+.map-area .map-choice.active {background-color:#0042ff;color:#fff}
+
+/* select */
+.select-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;font-weight:700;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
+.select-a::-ms-expand {display:none}
+
+.sh-box-a {display:flex;align-items:center;gap:8px}
+.sh-box-a .select-a {min-width:450px}
+.sh-box-a .btn-select {height:48px;padding:0 24px;font-size:22px;color:#fff;font-weight:700;display:inline-flex;align-items:center;background-color:#374060}
+
+.box-case {display:flex;gap:8px}
+.box-case .case-item {flex:1;display:flex;flex-direction:column;align-items:center}
+.case-item .btn-case {height:48px;border-radius:24px;background-color:#838484;display:inline-flex;min-width:160px;padding:0 20px;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:700}
+.case-item .case-img {aspect-ratio:450/166;border:1px solid #eee;margin-top:10px;width:100%}
+
 @media (max-width: 1023px) {
     .not-mobile {display:none}
 
@@ -94,6 +114,7 @@
     .page-txt-a {font-size:13px}
     .page-txt-b {font-size:16px}
     .page-txt-c {font-size:14px}
+    .page-txt-d {font-size:14px}
 
     .mt-100 {margin-top:50px}
     .mt-80 {margin-top:40px}
@@ -118,6 +139,16 @@
 
     .w-wide {overflow-x:auto;overflow-y:hidden}
     .w-wide table {width:160%}
+
+    .map-area {aspect-ratio:4/3}
+
+    /* select */
+    .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
+    .sh-box-a .select-a {min-width:auto;flex:1}
+    .sh-box-a .btn-select {height:40px;padding:0 16px;font-size:14px;flex-shrink:0}
+
+    .box-case {flex-direction:column;gap:16px}
+    .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}
 }
 @media (max-width: 600px) {
     .w-wide table {width:300%}

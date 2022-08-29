@@ -19,6 +19,7 @@ input::-webkit-search-cancel-button,
 [class*="inp-"]::-webkit-search-cancel-button {display:none}
 input::placeholder {color:#999}
 label {cursor:pointer}
+select {font-family:'KoPubWorldDotum', 'sans-serif';-webkit-appearance:none;-moz-appearance:none;appearance:none}
 * {box-sizing:border-box;word-break:break-all}
 
 .for-a11y {position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);overflow:hidden;text-indent:-99em}
