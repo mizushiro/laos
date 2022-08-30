@@ -7,7 +7,7 @@
 ;(function (win, doc, undefined) {
 
 	'use strict';
-	//TFUI
+	//laosUI
 	var global = 'laosUI';
 
 	win[global] = {};
@@ -4166,7 +4166,7 @@
 					that.classList.remove('current');
 					elBody.classList.add('scroll-no');
 				}
-				
+
 				(!elModal.querySelector('.ui-modal-dim')) && elModal.insertAdjacentHTML('beforeend','<div class="ui-modal-dim"></div>');
 
 				var elModalWrap = elModal.querySelector('.ui-modal-wrap');
@@ -4251,7 +4251,7 @@
 					var elThis = e.currentTarget;
 					var elThisModal = elThis.closest('.ui-modal');
 
-					TFUI.modal.hide({ 
+					laosUI.modal.hide({ 
 						id: elThisModal.id, 
 						remove: remove,
 						callbackClose: callbackClose
@@ -4296,7 +4296,7 @@
 
 			//system modal 제외
 			if (currentID !== 'uiSystemModal') {
-				TFUI.modal.hide({ 
+				laosUI.modal.hide({ 
 					id: currentID, 
 					remove: elCurrent.dataset.remove
 				});
@@ -4353,7 +4353,8 @@
 
 			if (!!len) {
 				elModalPrev = doc.querySelector('.ui-modal.open.n' + (len - 1));
-				elModalPrev.classList.add('current');
+				console.log('elModalPrev',elModalPrev);
+				!!elModalPrev && elModalPrev.classList.add('current');
 			}
 
 			//시스템팝업이 아닌 경우
@@ -4399,7 +4400,7 @@
 			},210);
 		}, 
 		hideSystem: function() {
-			TFUI.modal.hide({ 
+			laosUI.modal.hide({ 
 				id: 'uiSystemModal', 
 				type: 'system', 
 				remove: 'true'

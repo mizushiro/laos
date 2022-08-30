@@ -18,7 +18,24 @@
 				callback:laosUI.common.footer 
 			});
 			
-			console.log('------------------------------------------------------')
+			console.log('------------------------------------------------------');
+
+
+			const btn_uimodals = doc.querySelectorAll('.ui-btn-modal');
+			for (let i = 0; i < btn_uimodals.length; i++) {
+				btn_uimodals[i].addEventListener('click', laosAjaxModalOpen);
+			}
+			function laosAjaxModalOpen(){
+				const modal_id = this.dataset.id;
+				const modal_src = this.dataset.src;
+
+				laosUI.modal.show({ 
+					id: modal_id, 
+					type: 'normal',
+					ps: 'center',
+					src: modal_src
+				});
+			}
 		},
 		header: function(){
 			console.log('header load');	
@@ -65,6 +82,7 @@
 				}
 			}
 		}
+		
 	};
 
 	laosUI.gnb = {
