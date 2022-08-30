@@ -15,6 +15,9 @@
 /* button */
 [class^="btn-basic-"] {display:inline-flex;align-items:center;justify-content:center}
 .btn-basic-line {height:52px;min-width:140px;padding:0 24px;border:2px solid #000;font-size:16px;color:#000}
+.btn-basic-black {height:52px;min-width:140px;padding:0 24px;border:2px solid #000;background-color:#000;font-size:16px;color:#fff}
+.btn-basic-black:active,
+.btn-basic-line:active {background-color:#0042ff;border-color:#0042ff;color:#fff}
 
 /* breadcrumb */
 .breadcrumb-box {background-color:#dde6f0}
@@ -96,6 +99,16 @@
 /* input */
 .input-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;padding:0 12px}
 
+/* radio */
+.form_element-radio {position:relative;min-height:28px;line-height:28px;display:inline-block}
+.form_element-radio input[type="radio"] {position:absolute;opacity:0;left:0}
+.form_element-radio input[type="radio"]:checked + label .label-value:before {background-color:#0042ff;border-color:#0042ff}
+.form_element-radio input[type="radio"]:checked + label .label-value {color:#0042ff}
+.form_element-radio label {display:inline-block;margin-right:20px}
+.form_element-radio label .label-value {display:block;position:relative;padding:0 0 0 36px;line-height:28px;font-size:18px;color:#222;font-weight:700;letter-spacing:-.5px}
+.form_element-radio label .label-value:before {content:'';width:28px;height:28px;position:absolute;top:0;left:0;border:1px solid #c3ccce;background-color:#fff;border-radius:50%;box-sizing:border-box}
+.form_element-radio label .label-value:after {content:'';width:12px;height:12px;position:absolute;background-color:#fff;border-radius:50%;top:8px;left:8px;}
+
 .sh-box-a {display:flex;align-items:center;gap:8px}
 .sh-box-a .select-a {min-width:450px}
 .sh-box-a .select-a.size-s {min-width:240px}
@@ -110,67 +123,81 @@
 .case-item .btn-case {height:48px;border-radius:24px;background-color:#838484;display:inline-flex;min-width:160px;padding:0 20px;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:700}
 .case-item .case-img {aspect-ratio:450/166;border:1px solid #eee;margin-top:10px;width:100%}
 
+.form-box {border-top:2px solid #000;border-bottom:2px solid #000;padding:20px 0}
+.form-item {display:flex;align-items:center;min-height:48px}
+.form-item ~ .form-item {margin-top:12px}
+.form-item .form-title {flex-shrink:0;width:180px;font-size:20px;color:#555}
+.form-item .form-content {flex:1}
+.form-item .form-content .input-a {width:100%}
+
 /* ui modal :base */
-.scroll-no {overflow:hidden;padding-right:17px;}
-.ui-modal.n1 {z-index:201;}
-.ui-modal.n2 {z-index:202;}
-.ui-modal.n3 {z-index:203;}
-.ui-modal.n4 {z-index:204;}
-.ui-modal.n5 {z-index:205;}
+.scroll-no {overflow:hidden}
+.ui-modal.n1 {z-index:201}
+.ui-modal.n2 {z-index:202}
+.ui-modal.n3 {z-index:203}
+.ui-modal.n4 {z-index:204}
+.ui-modal.n5 {z-index:205}
 .ui-modal {display:none;position:fixed;top:0;left:0;z-index:200;width:100%;height:100%;overflow:hidden}
-.ui-modal.ready {display:flex;overflow-y:hidden;}
-.ui-modal.ready .ui-modal-dim {content:"";display:block;position:fixed;top:0;left:0;width:100%;height:100%;opacity:0;background:rgba(0, 0, 0, .5);}
-.ui-modal.open .ui-modal-dim{opacity:1;}
-.ui-modal.ps-center.is-over {align-items:flex-start;}
-.ui-modal.ps-center.is-over .ui-modal-wrap {margin:20px 0;}
-.ui-modal.ps-center {justify-content:center;align-items:center;}
-.ui-modal.ps-top {justify-content:center;align-items:flex-start;overflow:hidden;}
-.ui-modal.ps-bottom {justify-content:center;align-items:flex-end;overflow:hidden;}
-.ui-modal-wrap {max-width:600px;opacity:0;box-shadow:0 13px 49px 0 rgba(0,0,0,.45);position:relative;z-index:1;background:#fff;}
-.ui-modal.open .ui-modal-wrap{opacity:1;}
-.type-full .ui-modal-wrap,.size-mobile .ui-modal.ps-top .ui-modal-wrap,.size-mobile .ui-modal.ps-bottom .ui-modal-wrap {margin:0;width:100%;}
-.ui-modal.ps-top .ui-modal-wrap {margin-top:10px;}
-.ui-modal.ps-bottom .ui-modal-wrap {margin-bottom:10px;}
-.ui-modal.ready.open {animation-name:fadeIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.ready.close {animation-name:fadeOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.type-full.open.ps-center .ui-modal-wrap {animation-name:slideUpIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.type-full.close.ps-center .ui-modal-wrap {animation-name:slideUpOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.open.ps-center .ui-modal-wrap {animation-name:scaleIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.close.ps-center .ui-modal-wrap {animation-name:scaleOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.close.ps-top .ui-modal-wrap {animation-name:slideDownOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.open.ps-top .ui-modal-wrap {animation-name:slideDownIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.close.ps-bottom .ui-modal-wrap {animation-name:slideUpOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.open.ps-bottom .ui-modal-wrap {animation-name:slideUpIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.close.ps-center.type-system .ui-modal-wrap {animation-name:slideDownOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
-.ui-modal.open.ps-center.type-system .ui-modal-wrap {animation-name:slideDownIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards;}
+.ui-modal.ready {display:flex;overflow-y:hidden}
+.ui-modal.ready .ui-modal-dim {content:"";display:block;position:fixed;top:0;left:0;width:100%;height:100%;opacity:0;background:rgba(0, 0, 0, .5)}
+.ui-modal.open .ui-modal-dim{opacity:1}
+.ui-modal.ps-center.is-over {align-items:flex-start}
+.ui-modal.ps-center.is-over .ui-modal-wrap {margin:20px 0}
+.ui-modal.ps-center {justify-content:center;align-items:center}
+.ui-modal.ps-top {justify-content:center;align-items:flex-start;overflow:hidden}
+.ui-modal.ps-bottom {justify-content:center;align-items:flex-end;overflow:hidden}
+.ui-modal-wrap {max-width:600px;opacity:0;box-shadow:0 13px 49px 0 rgba(0,0,0,.45);position:relative;z-index:1;background:#fff}
+.ui-modal.open .ui-modal-wrap{opacity:1}
+.type-full .ui-modal-wrap,.size-mobile .ui-modal.ps-top .ui-modal-wrap,.size-mobile .ui-modal.ps-bottom .ui-modal-wrap {margin:0;width:100%}
+.ui-modal.ps-top .ui-modal-wrap {margin-top:10px}
+.ui-modal.ps-bottom .ui-modal-wrap {margin-bottom:10px}
+.ui-modal.ready.open {animation-name:fadeIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.ready.close {animation-name:fadeOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.type-full.open.ps-center .ui-modal-wrap {animation-name:slideUpIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.type-full.close.ps-center .ui-modal-wrap {animation-name:slideUpOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.open.ps-center .ui-modal-wrap {animation-name:scaleIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.close.ps-center .ui-modal-wrap {animation-name:scaleOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.close.ps-top .ui-modal-wrap {animation-name:slideDownOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.open.ps-top .ui-modal-wrap {animation-name:slideDownIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.close.ps-bottom .ui-modal-wrap {animation-name:slideUpOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.open.ps-bottom .ui-modal-wrap {animation-name:slideUpIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.close.ps-center.type-system .ui-modal-wrap {animation-name:slideDownOut;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
+.ui-modal.open.ps-center.type-system .ui-modal-wrap {animation-name:slideDownIn;animation-duration:.2s;animation-iteration-count:1;animation-timing-function:linear;animation-fill-mode:forwards}
 .ui-modal-header {position:relative;top:0;left:0;width:100%;padding:30px}
 .ui-modal-header h1 {font-weight:700;font-size:34px;color:#000;line-height:1}
 .ui-modal-header .icon-close {position:absolute;top:30px;right:30px;width:28px;height:28px;background:url("../images/icon/ic-popup-close.png") 0 0 no-repeat;background-size:contain}
 .ui-modal-body {position:relative;margin-top:0;padding:0 30px 30px 30px;background:#fff}
-.ui-modal-footer {position:relative;margin-top:0}
-.ui-modal-footer .wrap-btn {margin:0;}
+.ui-modal-footer {position:relative;margin-top:0;padding:0 30px 30px 30px;display:flex;justify-content:center;align-items:center;gap:8px}
+.ui-modal-footer .wrap-btn {margin:0}
 
-@keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
-@keyframes fadeOut {0% {opacity:1;}100% {opacity:0;visibility:hidden;}}
-@keyframes scaleIn {0% {opacity:0;transform:scale(0.9);}100% {opacity:1;transform:scale(1);}}
-@keyframes scaleOut {0% {opacity:1;transform:scale(1);}100% {opacity:0;transform:scale(0.9);visibility:hidden;}}
-@keyframes slideDownIn {0% {display:block;opacity:0;}1% {top:-100px;opacity:0;}100% {top:0;opacity:1;}}
-@keyframes slideDownOut {0% {top:0;opacity:1;}99% {top:-100px;opacity:0;}100% {display:none;opacity:0;}}
-@keyframes slideUpIn {0% {display:block;opacity:0;z-index:0;top:auto;}1% {bottom:-100px;opacity:0;top:auto;}100% {bottom:0;opacity:1;top:auto;}}
-@keyframes slideUpOut {0% {bottom:0;opacity:1;}99% {bottom:-100px;opacity:0;}100% {opacity:0;bottom:-100px;visibility:hidden;}}
-@keyframes slideLeftIn {0% {display:block;}1% {left:-100px;opacity:0;}100% {left:0;opacity:1;}}
-@keyframes slideLeftOut {0% {left:0;opacity:1;}99% {left:-100px;opacity:0;}100% {left:-100px;opacity:0;visibility:hidden;}}
-@keyframes slideRightIn {0% {display:block;}1% {right:-100px;opacity:0;}100% {right:0;opacity:1;}}
-@keyframes slideRightOut {0% {right:0;opacity:1;}99% {right:-100px;opacity:0;}100% {right:-100px;opacity:0;visibility:hidden;}}
+/* focus loop */
+[class*="ui-focusloop-"]:focus {height:auto}
+[class*="ui-focusloop-"] {position:absolute;left:0;width:100%;height:0;overflow:hidden}
+[class*="ui-focusloop-"] span {display:block;padding:5px 10px;font-size:12px;background:rgba(0, 0, 0, 0.5);color:#fff}
+.ui-focusloop-start {top:0}
+.ui-focusloop-end {bottom:0}
+
+@keyframes fadeIn {0% {opacity:0}100% {opacity:1}}
+@keyframes fadeOut {0% {opacity:1}100% {opacity:0;visibility:hidden}}
+@keyframes scaleIn {0% {opacity:0;transform:scale(0.9)}100% {opacity:1;transform:scale(1)}}
+@keyframes scaleOut {0% {opacity:1;transform:scale(1)}100% {opacity:0;transform:scale(0.9);visibility:hidden}}
+@keyframes slideDownIn {0% {display:block;opacity:0}1% {top:-100px;opacity:0}100% {top:0;opacity:1}}
+@keyframes slideDownOut {0% {top:0;opacity:1}99% {top:-100px;opacity:0}100% {display:none;opacity:0}}
+@keyframes slideUpIn {0% {display:block;opacity:0;z-index:0;top:auto}1% {bottom:-100px;opacity:0;top:auto}100% {bottom:0;opacity:1;top:auto}}
+@keyframes slideUpOut {0% {bottom:0;opacity:1}99% {bottom:-100px;opacity:0}100% {opacity:0;bottom:-100px;visibility:hidden}}
+@keyframes slideLeftIn {0% {display:block}1% {left:-100px;opacity:0}100% {left:0;opacity:1}}
+@keyframes slideLeftOut {0% {left:0;opacity:1}99% {left:-100px;opacity:0}100% {left:-100px;opacity:0;visibility:hidden}}
+@keyframes slideRightIn {0% {display:block}1% {right:-100px;opacity:0}100% {right:0;opacity:1}}
+@keyframes slideRightOut {0% {right:0;opacity:1}99% {right:-100px;opacity:0}100% {right:-100px;opacity:0;visibility:hidden}}
 @keyframes clockAni {0% {transform:rotate(0)}100% {transform:rotate(360deg)}}
-@keyframes orbitLeftAni {0% {left:0;z-index:2;opacity:1;}50% {left:calc(100% - 20px);z-index:2;opacity:1;}51% {left:calc(100% - 20px);z-index:1;opacity:1;}100% {left:0;z-index:1;opacity:1;}}
-@keyframes orbitRightAni {0% {left:calc(100% - 20px);z-index:1;opacity:1;}50% {left:0;z-index:1;opacity:1;}51% {left:0;z-index:2;opacity:1;}100% {left:calc(100% - 20px);z-index:2;opacity:1;}}
-@keyframes orbitScaleShowAni {0% {width:0;height:0;;}100% {width:150vmax;height:150vmax;}}
-@keyframes orbitScaleHideAni {0% {width:150vmax;height:150vmax;}100% {width:0;height:0;;}}
-@keyframes fadeInTop {0% {opacity:0;bottom:-40px;}100% {opacity:1;bottom:0;}}
-@keyframes fadeOutTop {0% {opacity:1;bottom:0;}99% {opacity:0;bottom:-40px;}100% {opacity:0;bottom:-40px;visibility:hidden;}}
-@keyframes datepickerUp {0% {display:block;z-index:0;}1% {bottom:-100vw;opacity:0;}100% {bottom:0;opacity:1;}}
-@keyframes datepickerDown {0% {bottom:0;opacity:1;}99% {bottom:-100vw;opacity:0;}100% {bottom:-100vw;opacity:0;visibility:hidden;}}
+@keyframes orbitLeftAni {0% {left:0;z-index:2;opacity:1}50% {left:calc(100% - 20px);z-index:2;opacity:1}51% {left:calc(100% - 20px);z-index:1;opacity:1}100% {left:0;z-index:1;opacity:1}}
+@keyframes orbitRightAni {0% {left:calc(100% - 20px);z-index:1;opacity:1}50% {left:0;z-index:1;opacity:1}51% {left:0;z-index:2;opacity:1}100% {left:calc(100% - 20px);z-index:2;opacity:1}}
+@keyframes orbitScaleShowAni {0% {width:0;height:0;}100% {width:150vmax;height:150vmax}}
+@keyframes orbitScaleHideAni {0% {width:150vmax;height:150vmax}100% {width:0;height:0;}}
+@keyframes fadeInTop {0% {opacity:0;bottom:-40px}100% {opacity:1;bottom:0}}
+@keyframes fadeOutTop {0% {opacity:1;bottom:0}99% {opacity:0;bottom:-40px}100% {opacity:0;bottom:-40px;visibility:hidden}}
+@keyframes datepickerUp {0% {display:block;z-index:0}1% {bottom:-100vw;opacity:0}100% {bottom:0;opacity:1}}
+@keyframes datepickerDown {0% {bottom:0;opacity:1}99% {bottom:-100vw;opacity:0}100% {bottom:-100vw;opacity:0;visibility:hidden}}
 
 @media (min-width: 1024px) {
     ::-webkit-scrollbar {width:6px}
@@ -185,7 +212,8 @@
     .ic-home {width:15px;height:13px}
     .ic-new {width:16px;height:16px}
 
-    .btn-basic-line {height:40px;min-width:100px;font-size:14px;padding:0 16px}
+    .btn-basic-line,
+    .btn-basic-black {height:40px;min-width:100px;font-size:14px;padding:0 16px}
 
     .page-title {font-size:24px}
     .sub-title {font-size:16px}
@@ -225,6 +253,11 @@
     .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
     .input-a {height:40px;border:1px solid #c8c9cc;font-size:14px;padding:0 12px}
 
+    .form_element-radio {min-height:20px;line-height:20px}
+    .form_element-radio label .label-value {padding:0 0 0 28px;line-height:20px;font-size:14px}
+    .form_element-radio label .label-value:before {width:20px;height:20px}
+    .form_element-radio label .label-value:after {width:8px;height:8px;top:6px;left:6px}
+
     .sh-box-a .select-a {min-width:auto;flex:1}
     .sh-box-a .select-a.size-s {min-width:160px;flex:inherit;flex-shrink:0}
     .sh-box-a .txt-item {flex:1}
@@ -235,10 +268,15 @@
     .box-case {flex-direction:column;gap:16px}
     .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}
 
-    .ui-modal-wrap {width:calc(100% - 40px);max-width:600px}
+    .form-item .form-title {font-size:14px;width:120px}
+    .form-item {min-height:40px}
+    .form-item ~ .form-item {margin-top:8px}
+
+    .ui-modal-wrap {min-width:320px;width:calc(100% - 40px);max-width:600px}
     .ui-modal-header .icon-close {top:20px;right:20px;width:20px;height:20px}
     .ui-modal-header {padding:20px}
     .ui-modal-header h1 {font-size:20px}
+    .ui-modal-footer,
     .ui-modal-body {padding:0 20px 20px 20px}
 }
 @media (max-width:600px) {
