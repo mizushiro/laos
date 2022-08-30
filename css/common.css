@@ -55,6 +55,8 @@
 .table-list tbody tr.fixed td {background-color:#e9ebee;font-weight:700}
 .table-list tbody td .link-notice {display:inline-block;max-width:calc(100% - 28px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;color:#000}
 .table-list .ic-new {vertical-align:middle;margin-left:8px;position:relative;top:-2px}
+.table-list.color-b thead th {background-color:#555556}
+.table-list.color-b tbody tr ~ tr td {border-top:2px solid #dddedf}
 
 .table-list-b table {border-top:4px solid #5e5d5d}
 .table-list-b thead th {font-size:16px;color:#343435;line-height:1.2;padding:12px 8px;text-align:center;border-right:2px solid #d9d9db}
@@ -149,6 +151,11 @@
 
     .box-case {flex-direction:column;gap:16px}
     .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}
+
+    .dialog_section .dialog_section-container {width:calc(100% - 40px);max-width:600px}
+    .dialog_section-container .btn_dialog-close {top:20px;right:20px;width:20px;height:20px}
+    .dialog_section .dialog-title {font-size:18px;padding:20px}
+    .dialog_section .dialog-content-area {padding:0 20px 20px 20px}
 }
 @media (max-width:600px) {
     .w-wide table {width:300%}
