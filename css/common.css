@@ -93,9 +93,17 @@
 .select-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;font-weight:700;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
 .select-a::-ms-expand {display:none}
 
+/* input */
+.input-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;padding:0 12px}
+
 .sh-box-a {display:flex;align-items:center;gap:8px}
 .sh-box-a .select-a {min-width:450px}
+.sh-box-a .select-a.size-s {min-width:240px}
 .sh-box-a .btn-select {height:48px;padding:0 24px;font-size:22px;color:#fff;font-weight:700;display:inline-flex;align-items:center;background-color:#374060}
+.sh-box-a .input-a {width:400px;padding-right:60px}
+.sh-box-a .txt-item {position:relative}
+.sh-box-a .txt-item .btn-sh {background:url("../images/icon/ic-search.png") no-repeat 50% 50%;width:30px;height:30px;position:absolute;right:16px;top:50%;margin-top:-15px;background-size:contain}
+.total-count {font-size:18px;color:#858589;font-weight:700}
 
 .box-case {display:flex;gap:8px}
 .box-case .case-item {flex:1;display:flex;flex-direction:column;align-items:center}
@@ -141,7 +149,6 @@
 .ui-modal-body {position:relative;margin-top:0;padding:0 30px 30px 30px;background:#fff}
 .ui-modal-footer {position:relative;margin-top:0}
 .ui-modal-footer .wrap-btn {margin:0;}
-
 
 @keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
 @keyframes fadeOut {0% {opacity:1;}100% {opacity:0;visibility:hidden;}}
@@ -216,8 +223,14 @@
 
     /* select */
     .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
+    .input-a {height:40px;border:1px solid #c8c9cc;font-size:14px;padding:0 12px}
+
     .sh-box-a .select-a {min-width:auto;flex:1}
+    .sh-box-a .select-a.size-s {min-width:160px;flex:inherit;flex-shrink:0}
+    .sh-box-a .txt-item {flex:1}
+    .sh-box-a .txt-item .input-a {width:100%}
     .sh-box-a .btn-select {height:40px;padding:0 16px;font-size:14px;flex-shrink:0}
+    .sh-box-a .txt-item .btn-sh {width:20px;height:20px;right:8px;margin-top:-10px}
 
     .box-case {flex-direction:column;gap:16px}
     .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}

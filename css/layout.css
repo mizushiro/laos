@@ -63,12 +63,12 @@
     .container {padding:0 20px}
     .container.contents {margin-top:40px}
 
-    .header-top .r-content .btn-gnb-open,
+    .header-top .r-content .btn-gnb-open {display:flex}
     .mobile-gnb-wrap {display:block}
     .header-top .r-content .language-type,
     .gnb-wrap {display:none}
 
-    .header-top > .container {border:none;padding:20px}
+    .header-top > .container {border:none;padding:12px 20px}
     .header-top .logo {width:173px;height:42px}
 
     .footer {padding:0}
