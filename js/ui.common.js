@@ -90,4 +90,42 @@
 	doc.addEventListener("DOMContentLoaded", function(){
 		laosUI.common.init();
 	});
+
+
 })(window, document);
+
+var LaosUIBase = (function() {
+		// layer popup
+		var callLayer = function() {
+			var btnLayer = document.querySelectorAll('[data-layer]');
+			for (var i = 0; i < btnLayer.length; i++) {
+				btnLayer[i].addEventListener('click', function(e) {
+					var targetId = this.dataset.layer;
+					var targetLayer = document.querySelector('#' + targetId);
+					targetLayer.classList.add('showing');
+					console.log(targetLayer);
+					document.querySelector('html, body').classList.add('scroll-off');
+				});
+			}
+			var btnLayerClose = document.querySelectorAll('.dialog_section .btn_dialog-close');
+			for (var i = 0; i < btnLayerClose.length; i++) {
+				btnLayerClose[i].addEventListener('click', function(e) {
+					var targetElem = e.target;
+					while (!targetElem.classList.contains('dialog_section')) {
+						targetElem = targetElem.parentNode;
+						if (targetElem.nodeName == 'BODY') {
+							targetElem = null;
+							return;
+						}
+					}
+					targetElem.classList.remove('showing');
+					document.querySelector('html, body').classList.remove('scroll-off');
+				})
+			}
+		};
+
+		return {
+			callLayer: callLayer,
+		}
+	}
+)();

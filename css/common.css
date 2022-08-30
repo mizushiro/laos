@@ -55,6 +55,8 @@
 .table-list tbody tr.fixed td {background-color:#e9ebee;font-weight:700}
 .table-list tbody td .link-notice {display:inline-block;max-width:calc(100% - 28px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;color:#000}
 .table-list .ic-new {vertical-align:middle;margin-left:8px;position:relative;top:-2px}
+.table-list.color-b thead th {background-color:#555556}
+.table-list.color-b tbody tr ~ tr td {border-top:2px solid #dddedf}
 
 .table-list-b table {border-top:4px solid #5e5d5d}
 .table-list-b thead th {font-size:16px;color:#343435;line-height:1.2;padding:12px 8px;text-align:center;border-right:2px solid #d9d9db}
@@ -99,6 +101,22 @@
 .box-case .case-item {flex:1;display:flex;flex-direction:column;align-items:center}
 .case-item .btn-case {height:48px;border-radius:24px;background-color:#838484;display:inline-flex;min-width:160px;padding:0 20px;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:700}
 .case-item .case-img {aspect-ratio:450/166;border:1px solid #eee;margin-top:10px;width:100%}
+
+/* dialog */
+.dialog_section {opacity:0;visibility:hidden;transition:.2s;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0, 0, 0, .6);z-index:9001}
+.dialog_section .dialog_section-container {transition:.4s;position:absolute;left:50%;top:65%;width:600px;transform:translate(-50%, -50%);background-color:#fff;box-shadow:0 13px 49px 0 rgba(0,0,0,.45);}
+.dialog_section.showing {visibility:visible;opacity:1}
+.dialog_section.showing .dialog_section-container {top:50%;opacity:1}
+.dialog_section-container .btn_dialog-close {position:absolute;top:30px;right:30px;width:28px;height:28px;z-index:20;background:url("../images/icon/ic-popup-close.png") no-repeat 0 0;background-size:100%}
+.dialog_section .dialog-title {text-align:left;font-size:34px;font-weight:700;color:#000;line-height:1;padding:30px}
+.dialog_section .dialog-content-area {padding:0 30px 30px;overflow-x:hidden;overflow-y:auto;max-height:calc(100vh - 160px)}
+
+@media (min-width: 1024px) {
+    ::-webkit-scrollbar {width:6px}
+    ::-webkit-scrollbar-track {background-color:transparent}
+    ::-webkit-scrollbar-thumb {border-radius:30px;background-color:rgba(0,0,0,.1);border:none}
+    ::-webkit-scrollbar-button {width:0;height:0}
+}
 
 @media (max-width: 1023px) {
     .not-mobile {display:none}
@@ -149,6 +167,11 @@
 
     .box-case {flex-direction:column;gap:16px}
     .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}
+
+    .dialog_section .dialog_section-container {width:calc(100% - 40px);max-width:600px}
+    .dialog_section-container .btn_dialog-close {top:20px;right:20px;width:20px;height:20px}
+    .dialog_section .dialog-title {font-size:18px;padding:20px}
+    .dialog_section .dialog-content-area {padding:0 20px 20px 20px}
 }
 @media (max-width: 600px) {
     .w-wide table {width:300%}

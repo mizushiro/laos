@@ -106,19 +106,19 @@
 				</div>
 				<div class="mt-40 box-case">
 					<div class="case-item">
-						<button type="button" class="btn-case">강도</button>
+						<button type="button" data-layer="case-a-layer" class="btn-case">강도</button>
 						<div class="case-img">
 
 						</div>
 					</div>
 					<div class="case-item">
-						<button type="button" class="btn-case">반경</button>
+						<button type="button" data-layer="case-b-layer" class="btn-case">반경</button>
 						<div class="case-img">
 
 						</div>
 					</div>
 					<div class="case-item">
-						<button type="button" class="btn-case">이동속도</button>
+						<button type="button" data-layer="case-c-layer" class="btn-case">이동속도</button>
 						<div class="case-img">
 
 						</div>
@@ -130,6 +130,127 @@
 	<footer class="footer">
 	</footer>
 </div>
+
+<!-- S : 강도 layer -->
+<div id="case-a-layer" class="dialog_section case-a">
+	<div class="dialog_section-container">
+		<div class="dialog-content">
+			<h1 class="dialog-title">강도</h1>
+			<div class="dialog-content-area">
+				<div class="table-list color-b">
+				<table>
+					<thead>
+					<tr>
+						<th scope="col">일자</th>
+						<th scope="col">최대풍속(m/s)</th>
+						<th scope="col">중심기압(hPa)</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+						<td>992</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+						<td>992</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+						<td>992</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+		<button type="button" class="btn_dialog-close"><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+</div>
+<!-- E : 강도 layer -->
+<!-- S : 반경 layer -->
+<div id="case-b-layer" class="dialog_section case-b">
+	<div class="dialog_section-container">
+		<div class="dialog-content">
+			<h1 class="dialog-title">반경</h1>
+			<div class="dialog-content-area">
+				<div class="table-list color-b">
+				<table>
+					<thead>
+					<tr>
+						<th scope="col">일자</th>
+						<th scope="col">강풍반경(km)</th>
+						<th scope="col">폭풍반경(km)</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+						<td>992</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+						<td>992</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+						<td>992</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+		<button type="button" class="btn_dialog-close"><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+</div>
+<!-- E : 반경 layer -->
+<!-- S : 이동속도 layer -->
+<div id="case-c-layer" class="dialog_section case-c">
+	<div class="dialog_section-container">
+		<div class="dialog-content">
+			<h1 class="dialog-title">이동속도</h1>
+			<div class="dialog-content-area">
+				<div class="table-list color-b">
+				<table>
+					<thead>
+					<tr>
+						<th scope="col">일자</th>
+						<th scope="col">이동속도(km/h)</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>992</td>
+					</tr>
+					<tr>
+						<td>2022-08-23 09:00</td>
+						<td>23</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+		<button type="button" class="btn_dialog-close"><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+</div>
+<!-- E : 이동속도 layer -->
 
 <script src="../js/polyfill.js"></script>
 <script src="../js/ui.global.js"></script>
@@ -146,6 +267,7 @@
 		});
 	})(window, document);
 
+	LaosUIBase.callLayer();
 </script>
 </body>
 </html>
