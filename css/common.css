@@ -102,67 +102,6 @@
 .case-item .btn-case {height:48px;border-radius:24px;background-color:#838484;display:inline-flex;min-width:160px;padding:0 20px;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:700}
 .case-item .case-img {aspect-ratio:450/166;border:1px solid #eee;margin-top:10px;width:100%}
 
-@media (max-width:1023px) {
-    .not-mobile {display:none}
-
-    .ic-home {width:15px;height:13px}
-    .ic-new {width:16px;height:16px}
-
-    .btn-basic-line {height:40px;min-width:100px;font-size:14px;padding:0 16px}
-
-    .page-title {font-size:24px}
-    .sub-title {font-size:16px}
-
-    .page-txt-a {font-size:13px}
-    .page-txt-b {font-size:16px}
-    .page-txt-c {font-size:14px}
-    .page-txt-d {font-size:14px}
-
-    .mt-100 {margin-top:50px}
-    .mt-80 {margin-top:40px}
-    .mt-40 {margin-top:20px}
-
-    .breadcrumb-box .breadcrumb {height:40px}
-    .breadcrumb-box .breadcrumb-item {font-size:12px}
-    .breadcrumb-box .breadcrumb-item:not(:last-child):after {width:5px;height:11px;margin-left:8px}
-    .breadcrumb-box .breadcrumb-item:not(:last-child) {margin-right:8px}
-
-    .nav-box {gap:8px}
-    .nav-box .nav-item {height:48px;min-width:160px;padding:0 20px;font-size:14px}
-
-    .table-list thead th {font-size:14px}
-    .table-list tbody td {font-size:13px}
-
-    .table-list-b thead th {font-size:14px;padding:8px}
-    .table-list-b tbody td {font-size:13px;padding:8px}
-    .table-list-b tbody tr:first-child td {padding-top:11px;padding-bottom:7px}
-
-    .paging {margin-top:28px}
-
-    .w-wide {overflow-x:auto;overflow-y:hidden}
-    .w-wide table {width:160%}
-
-    .map-area {aspect-ratio:4/3}
-
-    /* select */
-    .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
-    .sh-box-a .select-a {min-width:auto;flex:1}
-    .sh-box-a .btn-select {height:40px;padding:0 16px;font-size:14px;flex-shrink:0}
-
-    .box-case {flex-direction:column;gap:16px}
-    .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}
-
-    .dialog_section .dialog_section-container {width:calc(100% - 40px);max-width:600px}
-    .dialog_section-container .btn_dialog-close {top:20px;right:20px;width:20px;height:20px}
-    .dialog_section .dialog-title {font-size:18px;padding:20px}
-    .dialog_section .dialog-content-area {padding:0 20px 20px 20px}
-}
-@media (max-width:600px) {
-    .w-wide table {width:300%}
-}
-
-
-
 /* ui modal :base */
 .scroll-no {overflow:hidden;padding-right:17px;}
 .ui-modal.n1 {z-index:201;}
@@ -170,7 +109,7 @@
 .ui-modal.n3 {z-index:203;}
 .ui-modal.n4 {z-index:204;}
 .ui-modal.n5 {z-index:205;}
-.ui-modal {display:none;position:fixed;top:0;left:0;z-index:200;width:100%;height:100%;overflow:hidden;overflow-y:hidden;}
+.ui-modal {display:none;position:fixed;top:0;left:0;z-index:200;width:100%;height:100%;overflow:hidden}
 .ui-modal.ready {display:flex;overflow-y:hidden;}
 .ui-modal.ready .ui-modal-dim {content:"";display:block;position:fixed;top:0;left:0;width:100%;height:100%;opacity:0;background:rgba(0, 0, 0, .5);}
 .ui-modal.open .ui-modal-dim{opacity:1;}
@@ -179,7 +118,7 @@
 .ui-modal.ps-center {justify-content:center;align-items:center;}
 .ui-modal.ps-top {justify-content:center;align-items:flex-start;overflow:hidden;}
 .ui-modal.ps-bottom {justify-content:center;align-items:flex-end;overflow:hidden;}
-.ui-modal-wrap {max-width:90rem;opacity:0;box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);position:relative;z-index:1;margin:2rem;background:#fff;}
+.ui-modal-wrap {max-width:600px;opacity:0;box-shadow:0 13px 49px 0 rgba(0,0,0,.45);position:relative;z-index:1;background:#fff;}
 .ui-modal.open .ui-modal-wrap{opacity:1;}
 .type-full .ui-modal-wrap,.size-mobile .ui-modal.ps-top .ui-modal-wrap,.size-mobile .ui-modal.ps-bottom .ui-modal-wrap {margin:0;width:100%;}
 .ui-modal.ps-top .ui-modal-wrap {margin-top:1rem;}
@@ -201,14 +140,13 @@
 .ui-modal.type-system .ui-modal-wrap {width:auto;text-align:center;font-size:1.4rem;}
 .ui-modal.type-system .ui-modal-body,.ui-modal.type-system .ui-modal-footer {max-width:100% !important;background:#6200ee;color:#fff;}
 .ui-modal.type-system .ui-modal-wrap strong {font-weight:900;}
-.ui-modal-header {position:relative;top:0;left:0;width:100%;min-height:4rem;padding:.8rem 3.5rem 1.2rem 1.6rem;background:#212121;border-bottom:#EEEEEE;}
-.ui-modal-header h1 {font-weight:500;font-size:1.6rem;color:#fff;}
-.ui-modal-header .icon-close {position:absolute;right:.8rem;top:.8rem;border:0;font-family:'Material Icons';color:#fff;}
-.ui-modal-body {position:relative;margin-top:0;padding:1.5rem;background:#FAFAFA;}
-.ui-modal-footer {position:relative;margin-top:0;padding:1rem 1.5rem;background:#FAFAFA;}
+.ui-modal-header {position:relative;top:0;left:0;width:100%;padding:30px}
+.ui-modal-header h1 {font-weight:700;font-size:34px;color:#000;line-height:1}
+.ui-modal-header .icon-close {position:absolute;top:30px;right:30px;width:28px;height:28px;background:url("../images/icon/ic-popup-close.png") 0 0 no-repeat;background-size:contain}
+.ui-modal-body {position:relative;margin-top:0;padding:0 30px 30px 30px;background:#fff}
+.ui-modal-footer {position:relative;margin-top:0}
 .ui-modal-footer .wrap-btn {margin:0;}
 .ui-m .scroll-no {overflow:hidden;padding-right:0;}
-.ui-m .ui-modal-wrap {margin:2rem;}
 .ui-m .ui-modal.ps-top .ui-modal-wrap {margin-top:0;}
 .ui-m .ui-modal.ps-bottom .ui-modal-wrap {margin-bottom:0;}
 .ui-m .ui-modal.type-full.ps-center {justify-content:center;align-items:flex-start;}
@@ -219,7 +157,6 @@
 .ui-m .ui-modal.open.ps-top .ui-modal-wrap {top:0;}
 .ui-m .ui-modal.open.ps-bottom .ui-modal-wrap {bottom:0;}
 .ui-m .ui-modal.ps-center.is-over .ui-modal-wrap {margin:0;}
-
 
 /* focus loop */
 [class*="ui-focusloop-"]:focus {height:auto;}
@@ -272,3 +209,63 @@
 @keyframes fadeOutTop {0% {opacity:1;bottom:0;}99% {opacity:0;bottom:-4rem;}100% {opacity:0;bottom:-4rem;visibility:hidden;}}
 @keyframes datepickerUp {0% {display:block;z-index:0;}1% {bottom:-100vw;opacity:0;}100% {bottom:0;opacity:1;}}
 @keyframes datepickerDown {0% {bottom:0;opacity:1;}99% {bottom:-100vw;opacity:0;}100% {bottom:-100vw;opacity:0;visibility:hidden;}}
+
+@media (max-width:1023px) {
+    .not-mobile {display:none}
+
+    .ic-home {width:15px;height:13px}
+    .ic-new {width:16px;height:16px}
+
+    .btn-basic-line {height:40px;min-width:100px;font-size:14px;padding:0 16px}
+
+    .page-title {font-size:24px}
+    .sub-title {font-size:16px}
+
+    .page-txt-a {font-size:13px}
+    .page-txt-b {font-size:16px}
+    .page-txt-c {font-size:14px}
+    .page-txt-d {font-size:14px}
+
+    .mt-100 {margin-top:50px}
+    .mt-80 {margin-top:40px}
+    .mt-40 {margin-top:20px}
+
+    .breadcrumb-box .breadcrumb {height:40px}
+    .breadcrumb-box .breadcrumb-item {font-size:12px}
+    .breadcrumb-box .breadcrumb-item:not(:last-child):after {width:5px;height:11px;margin-left:8px}
+    .breadcrumb-box .breadcrumb-item:not(:last-child) {margin-right:8px}
+
+    .nav-box {gap:8px}
+    .nav-box .nav-item {height:48px;min-width:160px;padding:0 20px;font-size:14px}
+
+    .table-list thead th {font-size:14px}
+    .table-list tbody td {font-size:13px}
+
+    .table-list-b thead th {font-size:14px;padding:8px}
+    .table-list-b tbody td {font-size:13px;padding:8px}
+    .table-list-b tbody tr:first-child td {padding-top:11px;padding-bottom:7px}
+
+    .paging {margin-top:28px}
+
+    .w-wide {overflow-x:auto;overflow-y:hidden}
+    .w-wide table {width:160%}
+
+    .map-area {aspect-ratio:4/3}
+
+    /* select */
+    .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
+    .sh-box-a .select-a {min-width:auto;flex:1}
+    .sh-box-a .btn-select {height:40px;padding:0 16px;font-size:14px;flex-shrink:0}
+
+    .box-case {flex-direction:column;gap:16px}
+    .case-item .btn-case {font-size:14px;height:40px;border-radius:20px;min-width:100px}
+
+    .ui-modal-wrap {width:calc(100% - 40px);max-width:600px}
+    .ui-modal-header .icon-close {top:20px;right:20px;width:20px;height:20px}
+    .ui-modal-header {padding:20px}
+    .ui-modal-header h1 {font-size:20px}
+    .ui-modal-body {padding:0 20px 20px 20px}
+}
+@media (max-width:600px) {
+    .w-wide table {width:300%}
+}
