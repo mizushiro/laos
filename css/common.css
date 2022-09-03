@@ -36,6 +36,7 @@
 .page-txt-b {font-size:26px;color:#000;line-height:1.5}
 .page-txt-c {font-size:24px;color:#000;line-height:1.5}
 .page-txt-d {font-size:20px;color:#0072ff;line-height:1.5;font-weight:700}
+.page-txt-e {font-size:22px;color:#000;line-height:1.5}
 
 /* margin */
 .mt-100 {margin-top:100px}
@@ -98,6 +99,7 @@
 
 /* input */
 .input-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;padding:0 12px}
+.textarea-a {height:260px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;padding:0 12px;width:100%;resize:none;padding:12px}
 
 /* radio */
 .form_element-radio {position:relative;min-height:28px;line-height:28px;display:inline-block}
@@ -108,6 +110,15 @@
 .form_element-radio label .label-value {display:block;position:relative;padding:0 0 0 36px;line-height:28px;font-size:18px;color:#222;font-weight:700;letter-spacing:-.5px}
 .form_element-radio label .label-value:before {content:'';width:28px;height:28px;position:absolute;top:0;left:0;border:1px solid #c3ccce;background-color:#fff;border-radius:50%;box-sizing:border-box}
 .form_element-radio label .label-value:after {content:'';width:12px;height:12px;position:absolute;background-color:#fff;border-radius:50%;top:8px;left:8px;}
+
+.form_element-checkbox {position:relative;min-height:28px;line-height:28px;display:inline-block}
+.form_element-checkbox input[type="checkbox"] {position:absolute;opacity:0;left:0}
+.form_element-checkbox input[type="checkbox"]:checked + label .label-value:before {background-color:#0042ff;border-color:#0042ff}
+.form_element-checkbox input[type="checkbox"]:checked + label .label-value {color:#0042ff}
+.form_element-checkbox label {display:inline-block;margin-right:20px}
+.form_element-checkbox label .label-value {display:block;position:relative;padding:0 0 0 36px;line-height:28px;font-size:18px;color:#222;font-weight:700;letter-spacing:-.5px}
+.form_element-checkbox label .label-value:before {content:'';width:28px;height:28px;position:absolute;top:0;left:0;border:1px solid #c3ccce;background-color:#fff;border-radius:2px;box-sizing:border-box}
+.form_element-checkbox label .label-value:after {content:'';width:14px;height:12px;position:absolute;background:url("../images/icon/ic-check.png") no-repeat 0 0;background-size:contain;top:7px;left:8px}
 
 .sh-box-a {display:flex;align-items:center;gap:8px}
 .sh-box-a .select-a {min-width:450px}
@@ -127,8 +138,20 @@
 .form-item {display:flex;align-items:center;min-height:48px}
 .form-item ~ .form-item {margin-top:12px}
 .form-item .form-title {flex-shrink:0;width:180px;font-size:20px;color:#555}
-.form-item .form-content {flex:1}
+.form-item .form-title.w-auto {width:auto;padding-right:20px}
+.form-item .form-content {flex:1;display:flex;gap:8px}
 .form-item .form-content .input-a {width:100%}
+.btn-att {height:48px;padding:0 20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background-color:#374060;color:#fff;font-size:18px}
+
+.schedule-box {border-top:2px solid #626262}
+.schedule-header {padding:16px;display:flex;align-items:center;background-color:#e9ebee}
+.schedule-header .schedule-title {font-size:26px;color:#000;font-weight:700}
+.schedule-header .btn-group {margin-left:auto;display:flex;gap:12px}
+.schedule-header .btn-group .btn-schedule {height:56px;background-color:#000;padding:0 16px;min-width:180px;font-size:16px;color:#fff;display:flex;align-items:center;justify-content:center}
+.schedule-header .btn-group .btn-schedule.active {background-color:#0261ff}
+.schedule-content {padding:40px 0}
+.schedule-img {margin-top:40px}
+.schedule-img img {width:100%;vertical-align:top}
 
 /* ui modal :base */
 .scroll-no {overflow:hidden}
@@ -147,6 +170,7 @@
 .ui-modal.ps-top {justify-content:center;align-items:flex-start;overflow:hidden}
 .ui-modal.ps-bottom {justify-content:center;align-items:flex-end;overflow:hidden}
 .ui-modal-wrap {max-width:600px;opacity:0;box-shadow:0 13px 49px 0 rgba(0,0,0,.45);position:relative;z-index:1;background:#fff}
+.ui-modal-wrap.size-big {max-width:800px;min-width:800px}
 .ui-modal.open .ui-modal-wrap{opacity:1}
 .type-full .ui-modal-wrap,.size-mobile .ui-modal.ps-top .ui-modal-wrap,.size-mobile .ui-modal.ps-bottom .ui-modal-wrap {margin:0;width:100%}
 .ui-modal.ps-top .ui-modal-wrap {margin-top:10px}
@@ -222,6 +246,9 @@
     .page-txt-b {font-size:16px}
     .page-txt-c {font-size:14px}
     .page-txt-d {font-size:14px}
+    .page-txt-e {font-size:13px}
+
+    .total-count {font-size:13px}
 
     .mt-100 {margin-top:50px}
     .mt-80 {margin-top:40px}
@@ -252,11 +279,17 @@
     /* select */
     .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
     .input-a {height:40px;border:1px solid #c8c9cc;font-size:14px;padding:0 12px}
+    .textarea-a {height:160px;border-width:1px}
 
     .form_element-radio {min-height:20px;line-height:20px}
     .form_element-radio label .label-value {padding:0 0 0 28px;line-height:20px;font-size:14px}
     .form_element-radio label .label-value:before {width:20px;height:20px}
     .form_element-radio label .label-value:after {width:8px;height:8px;top:6px;left:6px}
+
+    .form_element-checkbox {min-height:20px;line-height:20px}
+    .form_element-checkbox label .label-value {padding:0 0 0 28px;line-height:20px;font-size:14px}
+    .form_element-checkbox label .label-value:before {width:20px;height:20px}
+    .form_element-checkbox label .label-value:after {width:8px;height:8px;top:6px;left:6px}
 
     .sh-box-a .select-a {min-width:auto;flex:1}
     .sh-box-a .select-a.size-s {min-width:160px;flex:inherit;flex-shrink:0}
@@ -271,8 +304,17 @@
     .form-item .form-title {font-size:14px;width:120px}
     .form-item {min-height:40px}
     .form-item ~ .form-item {margin-top:8px}
+    .btn-att {height:40px;font-size:13px;padding:0 12px}
+
+    .schedule-header {flex-direction:column;align-items:flex-start;gap:12px;padding:16px 12px}
+    .schedule-header .schedule-title {font-size:16px}
+    .schedule-header .btn-group {width:100%;gap:8px}
+    .schedule-header .btn-group .btn-schedule {height:44px;font-size:12px;flex:1 auto;min-width:inherit;padding:0 8px}
+    .schedule-content {padding:20px 0}
+    .schedule-img {margin-top:20px}
 
     .ui-modal-wrap {min-width:320px;width:calc(100% - 40px);max-width:600px}
+    .ui-modal-wrap.size-big {min-width:320px;width:calc(100% - 40px);max-width:800px}
     .ui-modal-header .icon-close {top:20px;right:20px;width:20px;height:20px}
     .ui-modal-header {padding:20px}
     .ui-modal-header h1 {font-size:20px}

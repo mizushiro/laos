@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Lao DMH</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="Laos, DMH"/>
+	<link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+<div class="wrap">
+	<header class="header">
+	</header>
+	<main class="content-area">
+		<div class="breadcrumb-box">
+			<div class="container">
+				<p class="breadcrumb">
+					<span class="breadcrumb-item"><i class="ic-home"></i><span class="for-a11y">home</span></span>
+					<span class="breadcrumb-item">Notice</span>
+					<span class="breadcrumb-item">Broadcast Schedule</span>
+				</p>
+			</div>
+		</div>
+		<div class="container contents">
+			<div class="page-title-wrap">
+				<h2 class="page-title">Broadcast Schedule</h2>
+			</div>
+			<div class="schedule-box mt-40">
+				<div class="schedule-header">
+					<h3 class="schedule-title">GK2A</h3>
+					<div class="btn-group">
+						<button type="button" class="btn-schedule active">Broadcast Schedule</button>
+						<button type="button" class="btn-schedule">Day Broadcast Schedule</button>
+					</div>
+				</div>
+				<div class="schedule-content">
+					<p class="page-txt-e">
+						GK2A AUI doesn't take images during maneuvering such as station<br><br>
+						[Station Keeping ]<br>
+						Wednesday and Thursday.(Time : Aperiodic)<br><br>
+						[Wheel Offloading]<br>
+						1. 20th	April	~ 21th	August	15:20 UTC(00:20 KST) / 15:20 ~ 15:30 ( 10 minutes )<br>
+						2. 22th	August	~ 20th	December	06:00 UTC(15:00 KST) / 06:00 ~ 06:10 ( 10 minutes )<br>
+						3. 21th	December	~ 19th	April	00:40 UTC(09:40 KST) / 09:40 ~ 09:50 ( 10 minutes )
+					</p>
+					<div class="schedule-img">
+						<img src="../images/temp/@sample.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+	</footer>
+</div>
+
+<script src="../js/polyfill.js"></script>
+<script src="../js/ui.global.js"></script>
+<script src="../js/ui.common.js"></script>
+<script>
+	'use strict';
+
+	//utils module
+	(function (win, doc, undefined) {
+		doc.addEventListener("DOMContentLoaded", function(){
+			const currentPageName = 'Broadcast Schedule';
+
+			laosUI.common.menuActive(currentPageName);
+		});
+	})(window, document);
+
+</script>
+</body>
+</html>
