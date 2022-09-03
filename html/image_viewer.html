@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Lao DMH</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="Laos, DMH"/>
+	<link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+<div class="wrap">
+	<header class="header">
+	</header>
+	<main class="content-area">
+		<div class="breadcrumb-box">
+			<div class="container">
+				<p class="breadcrumb">
+					<span class="breadcrumb-item"><i class="ic-home"></i><span class="for-a11y">home</span></span>
+					<span class="breadcrumb-item">Satellites</span>
+					<span class="breadcrumb-item">Image Viewer</span>
+				</p>
+			</div>
+		</div>
+		<div class="container contents">
+			<div class="page-title-wrap">
+				<h2 class="page-title">Image Viewer</h2>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+	</footer>
+</div>
+
+<script src="../js/polyfill.js"></script>
+<script src="../js/ui.global.js"></script>
+<script src="../js/ui.common.js"></script>
+<script>
+	'use strict';
+
+	//utils module
+	(function (win, doc, undefined) {
+		doc.addEventListener("DOMContentLoaded", function(){
+			const currentPageName = 'Image Viewer';
+
+			laosUI.common.menuActive(currentPageName);
+		});
+	})(window, document);
+
+</script>
+</body>
+</html>
