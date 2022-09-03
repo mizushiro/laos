@@ -1,5 +1,6 @@
 /* icon */
 [class^="ic-"] {display:inline-block;background-size:contain;background-repeat:no-repeat;background-position:50% 50%}
+[class^="ic-map"] {width:36px;height:36px}
 .ic-language {width:26px;height:25px;background-image:url("../images/icon/ic-language.png")}
 .ic-home {width:30px;height:26px;background-image:url("../images/icon/ic-home.png")}
 .ic-arrow {width:9px;height:22px;background-image:url("../images/icon/ic-arrow.png")}
@@ -11,6 +12,17 @@
 .ic-new {width:19px;height:19px;background-image:url("../images/icon/ic-new.png")}
 .ic-gnb-close {width:20px;height:20px;background-image:url("../images/icon/ic-gnb-close.png")}
 .ic-gnb-open {width:24px;height:19px;background-image:url("../images/icon/ic-gnb-open.png")}
+.ic-map1 {background-image:url("../images/icon/ic-map1.png")}
+.ic-map2 {background-image:url("../images/icon/ic-map2.png")}
+.ic-map3 {background-image:url("../images/icon/ic-map3.png")}
+.ic-map4 {background-image:url("../images/icon/ic-map4.png")}
+.ic-map5 {background-image:url("../images/icon/ic-map5.png")}
+.ic-map6 {background-image:url("../images/icon/ic-map6.png")}
+.ic-map7 {background-image:url("../images/icon/ic-map7.png")}
+.ic-map8 {background-image:url("../images/icon/ic-map8.png")}
+.ic-map9 {background-image:url("../images/icon/ic-map9.png")}
+.ic-map10 {background-image:url("../images/icon/ic-map10.png")}
+.ic-map11 {background-image:url("../images/icon/ic-map11.png")}
 
 /* button */
 [class^="btn-basic-"] {display:inline-flex;align-items:center;justify-content:center}
@@ -94,11 +106,11 @@
 .map-area .map-choice.active {background-color:#0042ff;color:#fff}
 
 /* select */
-.select-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;font-weight:700;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
+.select-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;font-weight:700;background:url("../images/icon/ic-select.png") 100% 50% no-repeat #fff;padding:0 48px 0 12px}
 .select-a::-ms-expand {display:none}
 
 /* input */
-.input-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;padding:0 12px}
+.input-a {height:48px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;paddinfg:0 12px}
 .textarea-a {height:260px;border:2px solid #c8c9cc;border-radius:0;font-size:20px;padding:0 12px;width:100%;resize:none;padding:12px}
 
 /* radio */
@@ -152,6 +164,26 @@
 .schedule-content {padding:40px 0}
 .schedule-img {margin-top:40px}
 .schedule-img img {width:100%;vertical-align:top}
+
+.viewer-top {display:flex;justify-content:space-between;align-items:center}
+.viewer-top  .viewer-option {display:flex;align-items:center}
+.viewer-top  .viewer-option .txt {font-weight:700;font-size:20px}
+
+.option-list {padding:16px 12px;display:flex;gap:16px;background-color:#e6eaee;flex-wrap:wrap}
+.option-list .option-item {display:flex;align-items:center;gap:4px}
+.option-list .option-item .input-a {width:160px}
+.option-list i {flex-shrink:0}
+.option-list .btn-option {height:48px;background-color:#626262;min-width:60px;color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 8px;flex-shrink:0}
+.option-list .btn-option.active,
+.option-list .btn-option:active {background-color:#0042ff}
+
+.map-box {position:relative;aspect-ratio:1360/1178;border:1px solid #ccc}
+.map-box .map-control {position:absolute;top:20px;right:20px}
+.map-box .btn-group {border:1px solid #1f1f1f;border-radius:12px;background-color:#fff;padding:8px}
+.map-box .btn-group ~ .btn-group {margin-top:8px}
+.map-box .btn-group .btn-map {display:flex;align-items:center;justify-content:center;width:40px;height:40px;position:relative}
+.map-box .btn-group .btn-map ~ .btn-map {margin-top:20px}
+.map-box .btn-group .btn-map ~ .btn-map:before {content:'';top:-10px;position:absolute;left:0;right:0;height:1px;background-color:#b7b7b7}
 
 /* ui modal :base */
 .scroll-no {overflow:hidden}
@@ -277,7 +309,7 @@
     .map-area {aspect-ratio:4/3}
 
     /* select */
-    .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat;padding:0 36px 0 12px}
+    .select-a {height:40px;border:1px solid #c8c9cc;font-size:14px;background:url("../images/icon/ic-select.png") 100% 50% no-repeat #fff;padding:0 36px 0 12px}
     .input-a {height:40px;border:1px solid #c8c9cc;font-size:14px;padding:0 12px}
     .textarea-a {height:160px;border-width:1px}
 
@@ -312,6 +344,23 @@
     .schedule-header .btn-group .btn-schedule {height:44px;font-size:12px;flex:1 auto;min-width:inherit;padding:0 8px}
     .schedule-content {padding:20px 0}
     .schedule-img {margin-top:20px}
+
+    .viewer-top .viewer-option .txt {font-size:13px}
+
+    .option-list {gap:8px 16px}
+    .option-list .btn-option {height:40px;font-size:13px}
+    .option-list .option-item .input-a {width:inherit;flex:1}
+    .option-list .option-item.full {width:100%}
+    .option-list .option-item {width:calc(50% - 8px)}
+    .option-list .option-item .select-a {flex:1}
+    [class^="ic-map"] {width:28px;height:28px}
+
+    .map-box .map-control {top:12px;right:12px}
+    .map-box .btn-group {border-radius:8px;padding:4px}
+    .map-box .btn-group ~ .btn-group {margin-top:8px}
+    .map-box .btn-group .btn-map {width:32px;height:32px}
+    .map-box .btn-group .btn-map ~ .btn-map {margin-top:16px}
+    .map-box .btn-group .btn-map ~ .btn-map:before {top:-8px}
 
     .ui-modal-wrap {min-width:320px;width:calc(100% - 40px);max-width:600px}
     .ui-modal-wrap.size-big {min-width:320px;width:calc(100% - 40px);max-width:800px}
