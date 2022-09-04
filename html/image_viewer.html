@@ -71,33 +71,74 @@
 					<button type="button" class="btn-option">OFF</button>
 				</div>
 			</div>
-			<div class="map-box">
-				<div class="map-control">
-					<div class="btn-group">
-						<button type="button" class="btn-map">
-							<i class="ic-map7"></i>
-							<span class="for-a11y">확대</span>
+			<div class="map-container">
+				<div class="map-box">
+					<div class="map-control">
+						<div class="btn-group">
+							<button type="button" class="btn-map">
+								<i class="ic-map7"></i>
+								<span class="for-a11y">확대</span>
+							</button>
+							<button type="button" class="btn-map">
+								<i class="ic-map8"></i>
+								<span class="for-a11y">현위치</span>
+							</button>
+							<button type="button" class="btn-map">
+								<i class="ic-map9"></i>
+								<span class="for-a11y">축소</span>
+							</button>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn-map">
+								<i class="ic-map10"></i>
+								<span class="for-a11y">이미지</span>
+							</button>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn-map">
+								<i class="ic-map11"></i>
+								<span class="for-a11y">다운</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="map-play-box">
+					<div class="play-bar">
+						<select name="" class="select-a">
+							<option value="">Latest 3hours</option>
+						</select>
+						<button type="button" class="btn-plays">
+							<i class="ic-play1"></i>
+							<span class="for-a11y">prev</span>
 						</button>
-						<button type="button" class="btn-map">
-							<i class="ic-map8"></i>
-							<span class="for-a11y">현위치</span>
+						<button type="button" class="btn-plays">
+							<i class="ic-play2"></i>
+							<span class="for-a11y">prev</span>
 						</button>
-						<button type="button" class="btn-map">
-							<i class="ic-map9"></i>
-							<span class="for-a11y">축소</span>
+						<button type="button" class="btn-plays">
+							<i class="ic-play3"></i>
+							<span class="for-a11y">play</span>
+						</button>
+						<!-- pause
+						<button type="button" class="btn-plays">
+							<i class="ic-play4"></i>
+							<span class="for-a11y">pause</span>
+						</button>
+						-->
+						<button type="button" class="btn-plays">
+							<i class="ic-play5"></i>
+							<span class="for-a11y">next</span>
+						</button>
+						<button type="button" class="btn-plays">
+							<i class="ic-play6"></i>
+							<span class="for-a11y">next</span>
 						</button>
 					</div>
-					<div class="btn-group">
-						<button type="button" class="btn-map">
-							<i class="ic-map10"></i>
-							<span class="for-a11y">이미지</span>
-						</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn-map">
-							<i class="ic-map11"></i>
-							<span class="for-a11y">다운</span>
-						</button>
+					<div class="play-data">
+						<div class="time-bar">
+							<input type="range" id="time" name="" min="0" max="11" class="lange-a">
+							<label for="time" class="time-txt">14:10</label>
+						</div>
 					</div>
 				</div>
 			</div>

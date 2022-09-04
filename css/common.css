@@ -1,6 +1,7 @@
 /* icon */
 [class^="ic-"] {display:inline-block;background-size:contain;background-repeat:no-repeat;background-position:50% 50%}
 [class^="ic-map"] {width:36px;height:36px}
+[class^="ic-play"] {width:20px;height:20px}
 .ic-language {width:26px;height:25px;background-image:url("../images/icon/ic-language.png")}
 .ic-home {width:30px;height:26px;background-image:url("../images/icon/ic-home.png")}
 .ic-arrow {width:9px;height:22px;background-image:url("../images/icon/ic-arrow.png")}
@@ -23,6 +24,13 @@
 .ic-map9 {background-image:url("../images/icon/ic-map9.png")}
 .ic-map10 {background-image:url("../images/icon/ic-map10.png")}
 .ic-map11 {background-image:url("../images/icon/ic-map11.png")}
+
+.ic-play1 {background-image:url("../images/icon/ic-play1.png")}
+.ic-play2 {background-image:url("../images/icon/ic-play2.png")}
+.ic-play3 {background-image:url("../images/icon/ic-play3.png")}
+.ic-play4 {background-image:url("../images/icon/ic-play4.png")}
+.ic-play5 {background-image:url("../images/icon/ic-play5.png")}
+.ic-play6 {background-image:url("../images/icon/ic-play6.png")}
 
 /* button */
 [class^="btn-basic-"] {display:inline-flex;align-items:center;justify-content:center}
@@ -177,13 +185,29 @@
 .option-list .btn-option.active,
 .option-list .btn-option:active {background-color:#0042ff}
 
-.map-box {position:relative;aspect-ratio:1360/1178;border:1px solid #ccc}
+.map-container {position:relative}
+.map-box {position:relative;aspect-ratio:1360/1178;border:1px solid #ccc;background-color:#eee}
 .map-box .map-control {position:absolute;top:20px;right:20px}
 .map-box .btn-group {border:1px solid #1f1f1f;border-radius:12px;background-color:#fff;padding:8px}
 .map-box .btn-group ~ .btn-group {margin-top:8px}
 .map-box .btn-group .btn-map {display:flex;align-items:center;justify-content:center;width:40px;height:40px;position:relative}
 .map-box .btn-group .btn-map ~ .btn-map {margin-top:20px}
 .map-box .btn-group .btn-map ~ .btn-map:before {content:'';top:-10px;position:absolute;left:0;right:0;height:1px;background-color:#b7b7b7}
+.map-play-box {position:absolute;top:20px;left:calc(50% - 40px);transform:translateX(-50%);border-radius:8px;background-color:#fff;padding:12px;display:flex;align-items:center}
+.map-play-box .play-bar {display:flex;align-items:center;gap:4px}
+.map-play-box .play-bar .select-a {margin-right:4px}
+.map-play-box .btn-plays {height:48px;width:48px;display:flex;align-items:center;justify-content:center;border:1px solid #1f1f1f;border-radius:8px}
+.map-play-box .btn-plays:active {background-color:#0042ff;border-color:#0042ff}
+.map-play-box .btn-plays:active .ic-play1 {background-image:url("../images/icon/ic-play1-on.png")}
+.map-play-box .btn-plays:active .ic-play2 {background-image:url("../images/icon/ic-play2-on.png")}
+.map-play-box .btn-plays:active .ic-play3 {background-image:url("../images/icon/ic-play3-on.png")}
+.map-play-box .btn-plays:active .ic-play4 {background-image:url("../images/icon/ic-play4-on.png")}
+.map-play-box .btn-plays:active .ic-play5 {background-image:url("../images/icon/ic-play5-on.png")}
+.map-play-box .btn-plays:active .ic-play6 {background-image:url("../images/icon/ic-play6-on.png")}
+.map-play-box .play-data {display:flex;align-items:center}
+.map-play-box .play-data .time-bar {width:340px;margin-left:12px;display:flex;align-items:center}
+.map-play-box .play-data .time-bar .lange-a {width:100%}
+.map-play-box .play-data .time-txt {font-size:16px;color:#0042ff;font-weight:700;white-space:nowrap;margin-left:8px;flex-shrink:0}
 
 /* ui modal :base */
 .scroll-no {overflow:hidden}
@@ -361,6 +385,20 @@
     .map-box .btn-group .btn-map {width:32px;height:32px}
     .map-box .btn-group .btn-map ~ .btn-map {margin-top:16px}
     .map-box .btn-group .btn-map ~ .btn-map:before {top:-8px}
+
+    .map-play-box {position:static;transform:translateX(0);padding:12px 0;display:block}
+    .map-play-box .play-bar {justify-content:center}
+    .map-play-box .btn-plays {height:40px;width:40px;border-radius:4px}
+    .map-play-box .btn-plays:active {background-color:#0042ff;border-color:#0042ff}
+    .map-play-box .btn-plays:active .ic-play1 {background-image:url("../images/icon/ic-play1-on.png")}
+    .map-play-box .btn-plays:active .ic-play2 {background-image:url("../images/icon/ic-play2-on.png")}
+    .map-play-box .btn-plays:active .ic-play3 {background-image:url("../images/icon/ic-play3-on.png")}
+    .map-play-box .btn-plays:active .ic-play4 {background-image:url("../images/icon/ic-play4-on.png")}
+    .map-play-box .btn-plays:active .ic-play5 {background-image:url("../images/icon/ic-play5-on.png")}
+    .map-play-box .btn-plays:active .ic-play6 {background-image:url("../images/icon/ic-play6-on.png")}
+    .map-play-box .play-data .time-bar {width:100%;margin-left:0;margin-top:12px}
+    .map-play-box .play-data .time-bar .lange-a {width:100%}
+    .map-play-box .play-data .time-txt {font-size:14px}
 
     .ui-modal-wrap {min-width:320px;width:calc(100% - 40px);max-width:600px}
     .ui-modal-wrap.size-big {min-width:320px;width:calc(100% - 40px);max-width:800px}
